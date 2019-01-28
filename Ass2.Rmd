@@ -1,0 +1,94 @@
+---
+title: "Ass2"
+author: "Priya"
+date: "1/25/2019"
+output: html_document
+---
+```{r missing values}
+p <- c(1, 2, NA, 4)
+p
+str(p)
+is.na(p)
+is.nan(p)
+mean(is.na(p))
+which (is.na(p))
+na.omit(p)
+na.exclude(p)
+na.pass(p)
+```
+
+```{r subsetting vectors}
+x <- c("TOS", "TCG", "TCN", "TDB", "TAI", "TKR")
+x[1]
+x[2]
+x[1:4]
+x[c(1, 3, 4)]
+u <- x > "TCN"
+u
+x[u]
+x[x > "TOS"]
+x[c(1, 1)]
+x[-1]
+x[]
+```
+
+```{r sequence of numbers}
+40:50
+seq(1:5)
+seq(6)
+seq(1,10)
+seq(1, 9, by = 2) 
+seq(1, 100, by = pi) 
+my_seq <- seq(5, 10, length = 30)
+seq(along.with = my_seq)
+seq(as.Date("2000/1/1"), by = "month", length.out = 12)
+x1<- c(1:4)
+x2<- c(5:9)
+x1*x2
+```
+
+```{r Matrices and Data Frame}
+m <- matrix(10:15, nrow = 2, ncol = 2)
+dimnames(m) <- list(c("a", "b"), c("c", "d"))
+m
+#Matrix Multiplication
+x <- matrix(1:4, 2, 2)
+y <- matrix(rep(10, 4), 2, 2)
+x*y
+
+a1 <- data.frame("No" = 1:2, "Age" = c(21,21), "Name" = c("Lalit","Priya"))
+a1
+mtcars
+head(mtcars)
+iris
+head(iris)
+help(iris)
+str(trees)
+head(trees,n=4)
+```
+
+```{r vectors}
+# numeric and character
+names(y) = c("Player","PTS")
+y
+y1 <- c("Elena", 11)
+y1
+y2 <- c("Rayanna", 10)
+y2
+y3 <- c("Claire", 2)
+y3
+y4 <- c("Sophie", 2)
+y4
+y5 <- c("Kalen", 25)
+y5
+# check if it is numeric
+is.numeric(y1)
+# check if it is character
+is.character(y1)
+# logical
+z <- c(TRUE, TRUE, FALSE)
+z
+```
+
+
+
